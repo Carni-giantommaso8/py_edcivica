@@ -1,7 +1,7 @@
-listaras=['terminata', 'chance', 'uccisi', 'radar', 'frode', 'contro', 'rabbia', 'risse', 'anticipato', 'minaccia']
-
-listasos=["bomba", "vergogna", "allarme", "incredibile", "shock", "denuncia", "svelato", "disastro", "mai visto prima", "terribile"]
-
+listaras=['uccisi', 'frode', 'contro', 'risse', 'minaccia']
+listaras2=['terminata', 'anticipato', 'chance', 'accusa', 'scoperto']
+listasos=["incredibile", "denuncia", "svelato", "disastro", "terribile"]
+listasos2=["bomba","shock","allarme", "mai visto prima","vergogna", ]
 def titolo():
 
     ras = 0   
@@ -15,10 +15,16 @@ def titolo():
     for i in listasos:
         if i in n:
             sos += 1 
+    for i in listaras2:  
+        if i in n:
+            ras += 2  
+    for i in listasos2:
+        if i in n:
+            sos += 2
 
     if sos > ras: 
         print("è una fake news")
-    elif sos<ras: 
+    elif sos < ras: 
         print("Non è una fake news")    
     else: 
         print("Non si sa")
